@@ -1,0 +1,19 @@
+.script_block:hover {
+  box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.411764);
+}
+.script_checkbox {
+  opacity: 0;
+}
+.script_header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0;
+}
+.script_header::before,
+.script_header::after {
+  flex: 1;
+  margin: 1em;
+  content: "";
+  border-bottom: 1px solid black;
+}

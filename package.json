@@ -1,6 +1,6 @@
 {
   "name": "@libshin/codepen",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Like codepen but worse",
   "source": "src/index.js",
   "umd:main": "build/codepen.umd.js",

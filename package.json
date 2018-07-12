@@ -24,7 +24,7 @@
   "license": "MIT",
   "scripts": {
     "start": "parcel serve src/index.html",
-    "build": "microbundle build",
+    "build": "microbundle build --external Preact",
     "release": "yarn -s build && npm publish --access public"
   }
 }

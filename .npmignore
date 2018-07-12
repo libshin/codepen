@@ -3,3 +3,4 @@ src/
 dist/
 *.lock
 *.log
+index.html

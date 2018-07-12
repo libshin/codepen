@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Codepen</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@libshin/codepen@latest/build/codepen.css">
+</head>
+
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://unpkg.com/react@16.4.1/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@16.4.1/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/manatea@0.3.0/dist/manatea.umd.js"></script>
+  <script src="https://unpkg.com/react-manatea@0.3.1/dist/react-manatea.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@libshin/codepen@latest/build/codepen.umd.js"></script>
+
+  <script type="text/react">
+    const { createCup } = manatea;
+    const { Manatee } = ReactManatea;
+
+    const add = tea => Math.max(0, tea + 1);
+    const subtract = tea => Math.max(0, tea - 1);
+
+    const counter = createCup(0, "counter");
+
+    const increment = () => counter(add);
+    const decrement = () => counter(subtract);
+
+    const App = () => (
+      <div>
+        Named counter <br />
+        <button onClick={increment}>+</button>
+        <button onClick={decrement}>-</button> <br />
+        <Manatee cup="counter">{tea => tea}</Manatee> <br />
+      </div>
+    );
+  </script>
+  <script type="text/react">
+    const { createCup } = manatea;
+    const { Manatee } = ReactManatea;
+
+    const add = tea => Math.max(0, tea + 1);
+    const subtract = tea => Math.max(0, tea - 1);
+
+    const counter = createCup(0, "counter");
+
+    const increment = () => counter(add);
+    const decrement = () => counter(subtract);
+
+    const App = () => (
+      <div>
+        Named counter <br />
+        <button onClick={increment}>+</button>
+        <button onClick={decrement}>-</button> <br />
+        <Manatee cup="counter">{tea => tea}</Manatee> <br />
+      </div>
+    );
+  </script>
+  <script type="text/react">
+    const { createCup } = manatea;
+    const { infuse } = ReactManatea;
+
+    const add = tea => Math.max(0, tea + 1);
+    const subtract = tea => Math.max(0, tea - 1);
+
+    const counter = createCup(0);
+
+    const increment = () => counter(add);
+    const decrement = () => counter(subtract);
+
+    const component = ({ tea }) => (
+      <div>
+        Unnamed connected counter <br />
+        <button onClick={increment}>+</button>
+        <button onClick={decrement}>-</button> <br />
+        {tea} <br />
+      </div>
+    );
+    const App = infuse(counter)(component);
+  </script>
+  <script type="text/react">
+    const { createCup } = manatea;
+    const { infuse } = ReactManatea;
+    
+    const add = tea => Math.max(0, tea + 1);
+    const subtract = tea => Math.max(0, tea - 1);
+    
+    const counter = createCup(0, "connect");
+
+    const increment = () => counter(add);
+    const decrement = () => counter(subtract);
+
+    const component = ({ tea }) => (
+      <div>
+        Named connected counter <br />
+        <button onClick={increment}>+</button>
+        <button onClick={decrement}>-</button> <br />
+        {tea} <br />
+      </div>
+    );
+    const App = infuse("connect")(component);
+  </script>
+</body>
+
+</html>

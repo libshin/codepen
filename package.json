@@ -1,0 +1,30 @@
+{
+  "name": "@libshin/codepen",
+  "version": "1.0.0",
+  "description": "Like codepen but worse",
+  "source": "src/index.js",
+  "umd:main": "build/codepen.umd.js",
+  "main": "build/codepen.js",
+  "module": "build/codepen.m.js",
+  "dependencies": {
+    "preact": "^8.2.9"
+  },
+  "resolutions": {
+    "eslint-scope": "3.7.1"
+  },
+  "devDependencies": {
+    "microbundle": "^0.5.1",
+    "parcel-bundler": "^1.9.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:libshin/codepen.git"
+  },
+  "author": "ayc0 (https://ayc0.github.io/stuff/)",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel serve src/index.html",
+    "build": "microbundle build",
+    "release": "yarn -s build && npm publish --access public"
+  }
+}

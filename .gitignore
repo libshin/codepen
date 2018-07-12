@@ -1,0 +1,9 @@
+node_modules
+/build
+/*.log
+
+dist/
+build/
+.cache/
+
+package-lock.json
